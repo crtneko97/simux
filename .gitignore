@@ -1,0 +1,67 @@
+# ── Build outputs / archives ───────────────────────────────────────────────
+build/*
+*.img
+*.qcow2
+*.vdi
+*.vmdk
+*.iso
+*.cpio
+*.cpio.gz
+*.tar
+*.tar.*
+*.xz
+*.bz2
+*.gz
+*.zip
+
+# ── C/C++ artifacts ────────────────────────────────────────────────────────
+*.o
+*.a
+*.lo
+*.la
+*.so
+*.so.*
+*.out
+*.obj
+*.exe
+*.d
+*.dSYM/
+*.pch
+
+# ── Tooling / IDE / analysis ───────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*~
+.DS_Store
+tags
+TAGS
+cscope.*
+compile_commands.json
+.clangd/
+.cache/
+ccache/
+
+# ── Logs / temp ────────────────────────────────────────────────────────────
+*.log
+*.tmp
+tmp/
+.log/
+logs/
+doc/boot-logs/*
+!doc/boot-logs/.keep   # keep the folder tracked
+
+# ── Disk images for SIMUX ──────────────────────────────────────────────────
+simux.img
+simux-*.img
+
+# ── Rootfs binaries (we generally rebuild these) ───────────────────────────
+rootfs-overlay/**/*.bin
+rootfs-overlay/**/*.o
+rootfs-overlay/**/*.so
+
+# ── Kernel & BusyBox source trees (we fetch/patch; don’t commit) ──────────
+# (You’re already ignoring build/*, so this is mostly belt-and-suspenders)
+linux-*/
+busybox-*/
+
